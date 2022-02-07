@@ -1,20 +1,19 @@
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 import HomePage from './pages/homepage/homepage.component'
 import ShopPage from './pages/shop/shop.component';
 import Header from './components/header/header.component';
-import SignInAndSignupPage from './pages/sign-in-and-signup/sign-in-and-signup.components';
-
+import SignIn from './components/sign-in/sign-in.component';
 function App() {
   return (
  
     <div >
       <Header/>
-      <Switch>
-         <Route  exact path="/" component = {HomePage}/>
-         <Route  path="/shop" component = {ShopPage}/>
-         <Route path='/signin' component={SignInAndSignupPage}/>
-      </Switch>
+      <Routes>
+         <Route  exact path="/" element={<HomePage/>}/>
+         <Route   path="/shop" element={<ShopPage/>}/>
+         <Route path="/signin" element={<SignIn/>}/>
+      </Routes>
     </div>
   );
 }
