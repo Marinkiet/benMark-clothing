@@ -11,7 +11,8 @@ const FormInput = ({handleChange,label, ...otherProps}) =>(
         label ? //if we pass one then null
         
         //adding shrink class if anyting typed in else keep to form-input-label
-        (<label className={`${
+        (
+            <label className={`${
             otherProps.value.length? 'shrink':''
          } form-input-label`}>
          {label}
